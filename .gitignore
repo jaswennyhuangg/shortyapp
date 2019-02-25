@@ -1,0 +1,10 @@
+storage/logs
+.env
+.idea
+swagger.json
+vendor
+storage
+src/refresh.yml
+src/config.yml
+src/my_app
+src/docs

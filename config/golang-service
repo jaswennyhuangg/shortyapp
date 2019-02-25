@@ -1,0 +1,13 @@
+FROM golang:1.11.5-alpine3.9
+
+RUN apk update && \
+    apk upgrade && \
+    apk add bash git && \
+    apk add gcc && \
+    apk add musl-dev && \
+    apk add curl
+
+RUN go get github.com/markbates/refresh
+RUN go get -u github.com/swaggo/swag/cmd/swag
+
+RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
